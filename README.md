@@ -1,9 +1,13 @@
 # Hola the Explorer — e-Yantra Robotics Competition 2026-27
 
-Autonomous navigation and payload docking in simulation: find a payload from a single
-overhead camera frame, plan a collision-free route around randomly placed pillars, dock
-precisely on the payload, attach it, carry it to the centre of a hexagon, release it,
-and return to the start — against an 8-second target in Task 3A.
+This repository documents the full Hola the Explorer theme, task by task
+(Tasks 0–3C) — from setup through perception, kinematics and control, planning
+and teamwork, to the integration and cooperative-carry missions and the video
+viva. Task 3A remains the deepest section, because it was the integration task:
+find a payload from a single overhead camera frame, plan a collision-free route
+around randomly placed pillars, dock precisely on the payload, attach it, carry
+it to the centre of a hexagon, release it, and return to the start — against an
+8-second target.
 
 - **Competition:** e-Yantra Robotics Competition (eYRC) 2026-27, IIT Bombay
 - **Theme:** Theme 2 — "Hola the Explorer"
@@ -17,7 +21,7 @@ and return to the start — against an 8-second target in Task 3A.
 > e-Yantra, IIT Bombay intellectual property provided for eYRC 2026-27 and are not
 > redistributable.
 
-Full project report (6 pages): [docs/eyrc-hola-explorer-project-report.pdf](docs/eyrc-hola-explorer-project-report.pdf)
+Full project report (9 pages): [docs/eyrc-hola-explorer-project-report.pdf](docs/eyrc-hola-explorer-project-report.pdf)
 
 ## The Task 3A mission
 
@@ -47,6 +51,79 @@ precision problem, not just a speed problem.
 | Task 3A | Integration | Camera-planned docking, attach / carry / detach and return under a time target (this report). |
 | Task 3B | Cooperative carry | Three robots carrying one payload as a rigid body, each docked on its own side with matched offsets and headings. |
 | Task 3C | Video viva | Recorded viva on the portal covering Tasks 1–3; submitted, awaiting grading when checked. |
+
+## The whole theme, task by task
+
+This repo covers the full theme, task by task, and Task 3A remains the deepest
+section because it was the integration task. The sections below give the detailed
+account of Task 3A; this section completes the picture for the rest of the theme,
+using only verified results. Where the verified record for a task is brief, that is
+stated plainly rather than filled in.
+
+### Task 0 — Setup | 100 / 100
+
+Task 0 set up the simulation environment used for the theme: Ubuntu 22.04, ROS 2
+Humble and MuJoCo. It scored 100/100. Detail beyond the environment and the score
+is not part of the verified record summarised here, so none is added.
+
+### Task 1A — Perception
+
+Task 1 as a whole scored 99/100 (subtasks 30/30, 20/20, 49/50). Task 1A covered
+perception: checkpoint detection from one overhead camera frame, using OpenCV
+colour masking and contours. No further verified detail for Task 1A is recorded
+here beyond the method above and the Task 1 scores.
+
+### Task 1B — Kinematics
+
+Task 1B covered inverse kinematics for the 3-wheel holonomic drive, converting
+body velocity to wheel speeds. This is the same conversion the Task 3A follower
+relies on. No further verified detail for Task 1B is recorded here beyond the
+description above.
+
+### Task 1C — Control
+
+Task 1C covered PID pose control, following waypoints and shapes without
+corner-cutting or overshoot. No further verified detail for Task 1C is recorded
+here beyond the description above.
+
+### Tasks 2A–2C — Planning and teamwork | 100 / 100
+
+Tasks 2A–2C together scored 100/100 (subtasks 20/20, 30/30, 50/50). The verified
+work for this stage covers three elements: occupancy-grid A* planning; the
+planner / follower split — the separation between planning a path and following
+it, which the Task 3A system also uses; and multi-robot coordination through a
+single gap. Detail beyond these three elements and the scores above is not part
+of the verified record summarised here, so none is added.
+
+### Task 3A — Integration | Best 22.19 / 30
+
+Task 3A was the integration task: camera-planned docking, attach, carry and
+detach, and return, under the 8-second target. It is covered in depth in the
+sections below. Best portal score: 22.19/30. Best verified run: 9.54 s. A later
+run of 7.88 s was reported by the team and is marked as reported, not verified,
+because its files and telemetry were not available for independent checking.
+
+### Task 3B — Cooperative carry | Best 46.68 / 50
+
+Task 3B extended the work from one robot to three: three robots carrying one
+payload as a single rigid body, each robot docked on its own side, with matched
+offsets and headings. Best portal score: 46.68/50. No further verified detail
+for Task 3B — such as timings or run-by-run results — is recorded here, so none
+is added.
+
+### Task 3C — Video viva
+
+Task 3C was a recorded viva on the portal, covering Tasks 1–3. It was submitted
+on 17 November 2026 and was awaiting grading when last checked. No score for
+Task 3C is recorded here, because grading was still awaited at the time of the
+last check.
+
+### The theme as a whole
+
+The progression is from setup, through perception, kinematics and control, to
+planning and teamwork, and then to integration and cooperative carry, with the
+viva covering Tasks 1–3. Task 3A remains the most fully documented task in this
+repo because it brought those earlier skills together in one timed mission.
 
 ## Architecture: one planner, one follower
 
@@ -239,7 +316,7 @@ repo.
 eyrc-hola-the-explorer/
 ├── README.md
 └── docs/
-    └── eyrc-hola-explorer-project-report.pdf   # Full 6-page project report
+    └── eyrc-hola-explorer-project-report.pdf   # Full 9-page project report
 ```
 
 Deliverables per submission: the planner and follower Python files, ROS bag
