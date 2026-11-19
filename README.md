@@ -95,11 +95,14 @@ it, which the Task 3A system also uses; and multi-robot coordination through a
 single gap. Detail beyond these three elements and the scores above is not part
 of the verified record summarised here, so none is added.
 
-### Task 3A — Integration | Best 22.19 / 30
+### Task 3A — Integration | Best 27.37 / 30
 
 Task 3A was the integration task: camera-planned docking, attach, carry and
 detach, and return, under the 8-second target. It is covered in depth in the
-sections below. Best portal score: 22.19/30. Best verified run: 9.54 s. A later
+sections below. Best portal score: 27.37/30, from the submission on 16 Nov,
+11:21 pm; earlier submissions were 23.03, 23.02 and 22.19. The portal marks
+the best submission "Late, not eligible", so the counted value after the late
+penalty may differ. Best verified run: 9.54 s. A later
 run of 7.88 s was reported by the team and is marked as reported, not verified,
 because its files and telemetry were not available for independent checking.
 
@@ -247,16 +250,17 @@ Verdict recorded at the time: safe to trial on the team's machine under a strict
 — **not pre-approved for submission**. VM timings (15–17 s) are throttled and are not
 comparable to the team's machine.
 
-### Portal scores (Stage 1, checked 16 Nov 2026)
+### Portal scores (Stage 1, checked 19 Nov 2026)
 
 | Task | Score | Detail |
 | --- | --- | --- |
 | Task 0 | 100 / 100 | Setup and theme selection |
 | Task 1 | 99 / 100 | 1A 30/30, 1B 20/20, 1C 49/50 |
 | Task 2 | 100 / 100 | 2A 20/20, 2B 30/30, 2C 50/50 |
-| Task 3A | 22.19 / 30 (best) | Single-robot docking mission |
+| Task 3A | 27.37 / 30 (best) | Single-robot docking mission |
 | Task 3B | 46.68 / 50 (best) | Three-robot cooperative carry |
 | Task 3C | Submitted | Video viva submitted 17 Nov 2026, awaiting grading when checked |
+| Task 3 total | 74.05 / 100 | 27.37 + 46.68; Task 3C not yet graded |
 
 **Reported, not verified:** the team later reported a 7.88 s Task 3A run (believed to
 be a v12.2 revision). Its files, diagnostic logs and CSV were not available when the
