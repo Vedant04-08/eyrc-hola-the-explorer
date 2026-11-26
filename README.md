@@ -1,7 +1,7 @@
 # Hola the Explorer — e-Yantra Robotics Competition 2026-27
 
 This repository documents the full Hola the Explorer theme, task by task
-(Task 0–3C) — from setup through perception, kinematics and control, planning
+(Tasks 0–3C) — from setup through perception, kinematics and control, planning
 and teamwork, to the integration and cooperative-carry missions and the video
 viva. Task 3A remains the deepest section, because it was the integration task:
 find a payload from a single overhead camera frame, plan a collision-free route
