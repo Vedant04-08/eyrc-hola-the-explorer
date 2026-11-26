@@ -1,7 +1,7 @@
 # Hola the Explorer — e-Yantra Robotics Competition 2026-27
 
 This repository documents the full Hola the Explorer theme, task by task
-(Tasks 0–3C) — from setup through perception, kinematics and control, planning
+(Task 0–3C) — from setup through perception, kinematics and control, planning
 and teamwork, to the integration and cooperative-carry missions and the video
 viva. Task 3A remains the deepest section, because it was the integration task:
 find a payload from a single overhead camera frame, plan a collision-free route
@@ -186,7 +186,7 @@ The robot is a 3-wheel holonomic drive (wheels at 30°, 150° and 270°; wheel r
 25.5 mm; chassis radius 64.12 mm). An inverse-kinematics matrix converts a commanded
 body twist (vx, vy, yaw rate) into the three wheel speeds. Omni wheels are what make
 the docking strategy possible: the robot can translate sideways without turning, so it
-can hold yaw π — facing left — while sliding into the dock on the payload's right side.
+can hold yaw π — facing left — while sliding into the dock on the payloads right side.
 
 - **Saturation handling:** wheel commands are limited to 30 rad/s. When a command
   would saturate, yaw authority is preserved first and translation is scaled down
@@ -216,7 +216,7 @@ can hold yaw π — facing left — while sliding into the dock on the payload's
 
 ## Results
 
-### Verified Task 3A runs (v10.9, team's Humble / Ubuntu 22.04 machine)
+### Verified Task 3A runs (v10.9, teams Humble / Ubuntu 22.04 machine)
 
 | Run | Approach | Carry | Return | Total | Outcome |
 | --- | --- | --- | --- | --- | --- |
@@ -245,10 +245,10 @@ zero planner warnings. However, overshoot past the goal deepened compared with v
 (true minimum along-track distance past the goal reached −5.0 mm or beyond on 6 of 12
 legs, worst −8.9 mm, with the return leg overshooting in all 4 runs).
 
-Verdict recorded at the time: safe to trial on the team's machine under a strict rule
+Verdict recorded at the time: safe to trial on the teams machine under a strict rule
 (median under 9.54 s, no abort / hold / refusal, overshoot not routinely past −5.4 mm)
 — **not pre-approved for submission**. VM timings (15–17 s) are throttled and are not
-comparable to the team's machine.
+comparable to the teams machine.
 
 ### Portal scores (Stage 1, checked 19 Nov 2026)
 
@@ -286,7 +286,7 @@ repo.
   slower; cruise speed was deliberately not pushed past the verified envelope
   without evidence.
 - **Environment discipline:** the Humble simulation binaries do not run under
-  ROS 2 Jazzy (missing library symbols), so all timing claims come from the team's
+  ROS 2 Jazzy (missing library symbols), so all timing claims come from the teams
   Humble / Ubuntu 22.04 machine. A separate Humble chroot environment was used only
   for completion and safety checks, never for timing.
 
@@ -330,5 +330,10 @@ team leader (best attempt counts).
 ## License
 
 MIT — see [LICENSE](LICENSE). The write-up and results in this repository are the
-author's own; the e-Yantra simulation and competition source are e-Yantra, IIT Bombay
+authors own; the e-Yantra simulation and competition source are e-Yantra, IIT Bombay
 intellectual property and are not included here.
+
+## Contributors
+
+- Vedas Rasmal — https://github.com/vedasrasmal
+- Vedant Vijay Gadekar — https://github.com/vedant04-08
